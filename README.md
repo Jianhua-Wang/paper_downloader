@@ -2,7 +2,9 @@
 
 ### Input
 
-DOIs or urls, split by comma (PMIDs not support yet).
+DOIs or urls, split by comma.
+
+PMIDs are not support yet, but url from PubMed acceptable.
 
 ### Usage
 
