@@ -19,7 +19,7 @@ def my_hook(t):
     return update_to
 
 def download_paper_from_scihub(doi):
-    sci_hub = 'https://sci-hub.tw'
+
     try:
         sci_hub = 'https://sci-hub'
         suffix_list = ['tw','se','st']
