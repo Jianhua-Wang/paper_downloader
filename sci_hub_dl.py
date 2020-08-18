@@ -4,7 +4,7 @@ import requests
 from bs4 import BeautifulSoup
 from urllib.request import urlretrieve
 from tqdm import tqdm
-import sys
+import sys,os
 
 # process bar
 def my_hook(t):
@@ -43,7 +43,8 @@ def download_paper_from_scihub(doi):
         print('\nDowload PDF')
         filename = download_link.split('/')[-1].split('?')[0]
         with tqdm(unit = 'B', unit_scale = True, unit_divisor = 1024, miniters = 1, desc = filename) as t:
-            urlretrieve(download_link, filename = filename, reporthook = my_hook(t), data = None)
+            urlretrieve(download_link, filename = f'{filename}.tmp', reporthook = my_hook(t), data = None)
+        os.rename(f'{filename}.tmp',filename)
         print(f"Saved paper to {filename}.")
     except:
         print(f'Failed retrieve PDF, check on browser.')

@@ -4,7 +4,7 @@
 
 DOIs or urls, split by comma.
 
-PMIDs are not support yet, but url from PubMed acceptable.
+PMIDs are not supported yet, but URLs from PubMed are acceptable.
 
 ### Usage
 
